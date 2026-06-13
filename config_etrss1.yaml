@@ -1,0 +1,42 @@
+# Real ETRSS-1 Satellite Configuration
+# Ethiopian Space Science and Technology Institute
+# Based on official orbital data from 2019-093B / NORAD 44880
+
+satellite:
+  name: "ETRSS-1"
+  norad_id: 44880
+  cospar_id: "2019-093B"
+  operator: "Ethiopian Space Science and Technology Institute"
+  launch_date: "2019-12-20"
+  mass_kg: 65
+  mission: "Earth Observation / Remote Sensing"
+  
+orbital:
+  # Sun-Synchronous Orbit parameters
+  altitude_km: 628
+  inclination_deg: 97.84
+  eccentricity: 0.00127
+  raan_deg: 170.5
+  arg_perigee_deg: 254.5
+  mean_anomaly_deg: 105.5
+  mean_motion_rev_per_day: 14.86355
+  period_minutes: 96.6
+  
+ground_station:
+  name: "Entoto Ground Station"
+  location: "Mount Entoto, Addis Ababa, Ethiopia"
+  latitude: 9.03
+  longitude: 38.74
+  altitude_m: 3200
+  antennas: ["7.3m S-band", "5m X-band"]
+  
+mission:
+  objectives:
+    - "Agricultural monitoring"
+    - "Water resource management"
+    - "Desertification tracking"
+    - "Natural disaster detection"
+  spatial_resolution_m: 13.7
+  spectral_bands: 4
+  revisit_days: 4
+  swath_width_km: 87.3

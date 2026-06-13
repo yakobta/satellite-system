@@ -1,0 +1,44 @@
+# Satellite Ground Station Configuration
+# Ethiopian Space Science and Technology Institute
+
+satellite:
+  name: "ET-SAT-001"
+  norad_id: 99999
+  battery_capacity_ah: 100.0
+  power_consumption_w: 500.0
+  solar_panel_w: 1500.0
+  telemetry_rate_hz: 1
+  
+orbital:
+  earth_radius_km: 6371.0
+  gravitational_parameter: 398600.4418
+  default_altitude_km: 550.0
+  inclination_deg: 98.5
+  eccentricity: 0.001
+
+ground_station:
+  name: "Addis Ababa Ground Station"
+  location: "Entoto Observatory, Ethiopia"
+  latitude: 9.03
+  longitude: 38.74
+  altitude_m: 3200.0
+  port: 5005
+  buffer_size: 65536
+
+database:
+  path: "data/telemetry.db"
+  backup_enabled: true
+  retention_days: 30
+  backup_interval_hours: 24
+
+logging:
+  level: "INFO"
+  format: "json"
+  file: "logs/satellite.log"
+  max_size_mb: 100
+  backup_count: 5
+
+mission:
+  operator: "ESSTI - Ethiopian Space Science and Technology Institute"
+  ground_station: "Entoto Observatory"
+  contact_email: "operations@essti.gov.et"
