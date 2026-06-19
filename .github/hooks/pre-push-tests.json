@@ -1,0 +1,6 @@
+{
+  "name": "pre-push-tests",
+  "event": "pre-push",
+  "command": "python3 -m pytest tests/ -v",
+  "description": "Run full test suite before pushing to GitHub"
+}

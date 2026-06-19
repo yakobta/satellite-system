@@ -1,0 +1,6 @@
+{
+  "name": "pre-commit-check",
+  "event": "pre-commit",
+  "command": "python3 -m py_compile src/*.py && python3 -m pytest tests/",
+  "description": "Run syntax check and tests before commit"
+}

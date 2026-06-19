@@ -1,0 +1,7 @@
+{
+  "name": "post-save-dashboard",
+  "event": "after-save",
+  "pattern": "*.py",
+  "command": "python3 scripts/professional_report.py",
+  "description": "Auto-generate dashboard after code changes"
+}
