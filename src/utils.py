@@ -11,8 +11,17 @@ import math
 
 # Configure logging
 def setup_logging(level: str = "INFO", log_file: str = "logs/satellite.log"):
-    """Setup professional logging configuration"""
+    """Setup professional logging configuration."""
     
+    log_dir = log_file.rsplit("/", 1)[0]
+    if log_dir:
+        try:
+            import os
+
+            os.makedirs(log_dir, exist_ok=True)
+        except OSError as exc:
+            raise RuntimeError(f"Unable to create log directory {log_dir}") from exc
+
     logging.basicConfig(
         level=getattr(logging, level.upper()),
         format='%(asctime)s | %(levelname)-8s | %(name)s | %(message)s',
